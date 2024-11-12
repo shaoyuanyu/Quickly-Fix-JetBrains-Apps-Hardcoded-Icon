@@ -7,7 +7,7 @@ jetbrains_desktop_path = os.path.expanduser("~/.local/share/applications/")
 # key is the prefix of the ".desktop" file
 # value is <product-name> for Icon
 app_to_icon_map = {
-    "Andorid Studio": "android-studio",
+    "Android Studio": "android-studio",
     "jetbrains-idea": "idea",
     "jetbrains-pycharm": "pycharm",
     "jetbrains-rustrover": "rustrover",
@@ -33,7 +33,7 @@ def main():
                         for line in lines:
                             if line.startswith('Icon='):
                                 print("Found ", filename, ", ", line, ", changing to ", new_icon_value)
-                                file.write(f'Icon={new_icon_value}')
+                                file.write(f'Icon={new_icon_value}\n')
                             else:
                                 file.write(line)
 
